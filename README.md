@@ -1,5 +1,5 @@
 # OpenRefine: Cleaning data so it is ready for analysis!
-<img src="images/____.png" width="150"/>
+<img src="images/OpenRefine_logo_color.png" width="150"/>
 
 OpenRefine is...
 
