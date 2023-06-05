@@ -1,12 +1,12 @@
 # OpenRefine: Cleaning data so it is ready for analysis!
-<img src="images/OpenRefine_logo_color.png" width="150"/>
+<img src="images/OpenRefine_logo_color.png" width="200"/>
 
 OpenRefine is...
 
 
 ## Workshop Resources
  - Software - access via the [OpenRefine's homepage](https://openrefine.org/)
- - Documentation - [OpenRefine's Manual](https://openrefine.org/docs)
+ - Documentation - [OpenRefine's User Manual](https://openrefine.org/docs)
  - Data - download from this dropbox [OpenRefine workshop data folder](https://www.dropbox.com/___________)
 
 ## Workshop Goals
