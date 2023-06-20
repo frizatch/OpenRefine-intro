@@ -1,4 +1,4 @@
-# Cleaning data so it is ready for analysis with OpenRefine!
+# Cleaning data with OpenRefine!
 <img src="images/OpenRefine_logo_color.png" width="200"/>
 
 OpenRefine is a free, open-source Java application that helps you easily prep data for analysis.
