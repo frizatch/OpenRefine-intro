@@ -1,7 +1,7 @@
 # OpenRefine: Cleaning data so it is ready for analysis!
 <img src="images/OpenRefine_logo_color.png" width="200"/>
 
-OpenRefine is...
+OpenRefine is a free, open-source Java application that helps you easily prep data for analysis.
 
 
 ## Workshop Resources
@@ -23,6 +23,15 @@ Why do we need clean data?
 ## OpenRefine
 
 OpenRefine is a free, open-source Java application.
+
+### Downloading the software
+
+https://openrefine.org/download.html
+
+Compatible on Windows, Mac and Linux!
+The mac package comes with java built in.
+The windows packages have an option of with java built in or not.
+NOTE: I had my java at the most recent update via my java control panel, but the windows sans java via the github assests page sent me to the Installation documention even so. Windows package with java worked fine.
 
 ## GREL
 For data manipulation, Open Refine uses GREL (General Refine Expression Language).
