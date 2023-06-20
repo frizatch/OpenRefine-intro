@@ -20,6 +20,9 @@ By the end of this workshop, you will be able to:
 ## <a name="why-clean-data"></a>  Why do we need clean data?
 Why do we need clean data?
 
+## OpenRefine
+
+OpenRefine is a free, open-source Java application.
 
 ## GREL
 For data manipulation, Open Refine uses GREL (General Refine Expression Language).
