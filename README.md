@@ -14,13 +14,16 @@ OpenRefine is a free, open-source Java application that helps you easily prep da
 By the end of this workshop, you will be able to:
 - Use OpenRefine to explore your data
 - Use OpenRefine to accelerate the data cleaning process
+- Understand the concept of GREL expressions for data transformations
 - Look up external data via URLs and enrich your data
 
 ## Outline
 - [Why do we need clean data?](#why-clean-data)
 - What is OpenRefine
 - Getting Set Up and Running OpenRefine
-- 
+- Facets, Filters and Clustering
+- Transformations
+- Adding data using APIs
 
 ## <a name="why-clean-data"></a>  Why do we need clean data?
 Why do we need clean data?
@@ -95,7 +98,11 @@ To keep the transformed data, you need to use the Export option.
 
 ## External Data - using APIs
 
-Add column by fetching URLs!!!
+Good datasets have a column of unique identifiers that you can hopefully use to attach more information you may want. Think of ISSN numbers for publications or FIPS codes for geographic areas. In our NBI dataset, we have column called ObjectId that we can use to link to more information via the National Bridges Inventory API.
+
+(okay, I'm coming clean: for this exercise, I provided a subset of the over 8,000 bridges in CO, and a subset of the columns that you can see in the data dictionary. What we're going to do now is use the API to go back and snag a useful column I cut off earlier. But this is to demonstrate how the "Add column by fetching URLs..." option works!)
+
+In our assessment of bridges, one useful data point could be the year the bridge was built (Item 27 in the data dictionary). Let's retrieve it from the online NBI database...
 
 Examine this ridiculous [link](https://geo.dot.gov/server/rest/services/Hosted/National_Bridge_Inventory_DS/FeatureServer/0/query?where=&objectIds=65059&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=year_built_027&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnCentroid=false&timeReferenceUnknownClient=false&sqlFormat=none&resultType=&datumTransformation=&lodType=geohash&lod=&lodSR=&f=pjson) (See below). It is a URL that is hitting a json return of the API for retrieving information from the NBI database for a particular bridge and it's year-built attribute. To turn it into a useful GREL expression for our purposes, we'll adjust the objectId to equal our value, as opposed to this one bridge that has the objectId 65059. The following text is adjusted and you can copy & paste it, but understand that you're pointing to the json at the URL with the objectId inserted:
 ```
