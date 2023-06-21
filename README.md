@@ -51,13 +51,21 @@ When working in OpenRefine, you'll be interacting with a browser window. Initial
 
 To exit OpenRefine, close all the browser tabs or windows, then navigate to the command line window. To close this window and ensure OpenRefine exits properly, hold down [control] and press [c] on your keyboard. This will save all changes to your projects.
 
-### General operation concept
+### OpenRefine's General Operation
 
 OpenRefine keeps all of the data on your local machine! No internet connection is needed, and none of the data or commands you enter in OpenRefine are sent to a remote server. This does mean that your project is tied to that local machine, so export/import is necessary if you want to work on a project elsewhere.
 You are NOT modifying original/raw data.
 Projects are autosaved every five minutes and when OpenRefine is properly shut down (Ctrl+C).
 
 ### Loading Data
+
+OpenRefine can accept a number of different file formats: TSV, CSV, JSON, Excel, Google Spreadsheets, XML and TXT. Think spreadsheets.
+
+Once a browser window has launched with OpenRefine, you'll be asked to open a new project, or open an old one if you've already worked on some (these projects are stored in a folder you chose when you installed the software). Use the Choose Files button, then navigate to your downloaded [NBI data](https://www.dropbox.com/s/b6h9gonvii74k4r/NBI-NationalBridgesIndex-subset.csv?dl=0). You'll see the file name appear. Click Next.
+
+The data will load and you'll have a chance to preview it to make sure the character encoding, the column separators and the headers are all read properly. The defaults will be fine for our NBI data. Rename the project if you so choose, then click Create Project in the upper right.
+
+You will see how many records your data has (250). You can adjust how many are shown at a time using the options at the top.
 
 ## Working with the Data
 
