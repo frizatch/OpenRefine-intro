@@ -69,7 +69,7 @@ The data will load and you'll have a chance to preview it to make sure the chara
 
 You will see how many records your data has (250). You can adjust how many are shown at a time using the options at the top.
 
-## Working with the Data
+## Data Wrangling
 
 ### Facets and Filters
 
@@ -89,7 +89,7 @@ Clustering groups together similar, but inconsistent values in a given column an
 
 There are different clustering algorithms. Play around with the variations.
 
-## Transformations with GREL
+### Transformations with GREL
 
 For data manipulation, Open Refine uses GREL (General Refine Expression Language).
 
@@ -104,13 +104,13 @@ We can quickly flag this information by:
 - creating a new column based on the "maintenance_21" column using the expression: `value-cells["owner_022"].value` (we are subtracting the numbers)
 - any non-zero value indicates the maintenance is not done by the owner!
 
-## Undo / Redo
+### Undo / Redo
 
 As mentioned before, OpenRefine is not actually changing your original data. It is writing a series of steps that it uses to transform the data as it appears on your local server. You can go to the Undo/Redo tab and back up to a previous step. Only when you create a different fork of transformation, do you lose the steps that were downline.
 
 To keep the transformed data, you need to use the Export option.
 
-## External Data - using APIs
+### External Data - using APIs
 
 Good datasets have a column of unique identifiers that you can hopefully use to attach more information you may want. Think of ISSN numbers for publications or FIPS codes for geographic areas. In our NBI dataset, we have column called ObjectId that we can use to link to more information via the National Bridges Inventory API.
 
