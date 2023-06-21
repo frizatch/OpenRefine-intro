@@ -22,7 +22,7 @@ By the end of this workshop, you will be able to:
 - Getting Set Up and Running OpenRefine
 - 
 
-##C  Why do we need clean data?
+## <a name="why-clean-data"></a>  Why do we need clean data?
 Why do we need clean data?
 
 ## OpenRefine
@@ -42,19 +42,21 @@ NOTE: I had my java at the most recent update via my java control panel, but the
 
 ### Running OpenRefine
 
-When running OpenRefine, initially a command line window will open. This is a window with a black background. As OpenRefine runs, lines of text will appear in the command line window. Then the Open Refine interface will open in your default web browser. You do not need to interact with the command line window. Leave it open in the background, and work on datasets in your web browser.
+When working in OpenRefine, you'll be interacting with a browser window. Initially a command line window will open on your machine (a window with a black background). As OpenRefine runs, lines of text will appear in the command line window, then the OpenRefine interface will open in your default web browser. Leave the command line window open in the background and let it do its thing, and work on datasets in your web browser.
 
 ### Exiting OpenRefine
 
 To exit OpenRefine, close all the browser tabs or windows, then navigate to the command line window. To close this window and ensure OpenRefine exits properly, hold down [control] and press [c] on your keyboard. This will save all changes to your projects.
 
-### GENERAL
+### General operation concept
 
-No internet connection is needed, and none of the data or commands you enter in OpenRefine are sent to a remote server.
+OpenRefine keeps all of the data on your local machine! No internet connection is needed, and none of the data or commands you enter in OpenRefine are sent to a remote server. This does mean that your project is tied to that local machine, so export/import is necessary if you want to work on a project elsewhere.
 You are NOT modifying original/raw data.
-Projects are autosaved every five minutes and when OpenRefine is properly shut down (Ctrl+C). See History in User Manual for details.
-Files are saved locally such that if you are working on two computers you will have to export/import files/projects.
+Projects are autosaved every five minutes and when OpenRefine is properly shut down (Ctrl+C).
 
+### Loading Data
+
+## Working with the Data
 
 ### Facets and Filters
 
