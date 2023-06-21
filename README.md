@@ -117,7 +117,7 @@ Because retrieving data from external URLs takes time, we'll target just a few l
 Select a few rows from the data set (no more than 10!) by:
 - Clicking the star icon for the relevant rows in the first column
 - Facet by Star
-- Choose the rows by selecting "include"
+- Choose the rows by selecting "include" next to the "true" rows
  
 In the objectId column use the dropdown menu to choose ‘Edit column->Add column by fetching URLs’
 Give the column a name e.g. “Bridge-Details”
