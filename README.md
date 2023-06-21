@@ -112,6 +112,17 @@ Good datasets have a column of unique identifiers that you can hopefully use to 
 
 In our assessment of bridges, one useful data point could be the year the bridge was built (Item 27 in the data dictionary). Let's retrieve it from the online NBI database...
 
+Because retrieving data from external URLs takes time, we'll target just a few lines in the data. In reality you would want to run this over many rows (and probably go and do something else while it ran).
+
+Select a few rows from the data set (no more than 10!) by:
+- Clicking the star icon for the relevant rows in the first column
+- Facet by Star
+- Choose the rows by selecting "include"
+ 
+In the objectId column use the dropdown menu to choose ‘Edit column->Add column by fetching URLs’
+Give the column a name e.g. “Bridge-Details”
+In the expression box you need to write some GREL where the output of the expression is a URL which can be used to retrieve data (the format of the data could be HTML, XML, JSON, or some other text format)
+
 Examine this ridiculous [link](https://geo.dot.gov/server/rest/services/Hosted/National_Bridge_Inventory_DS/FeatureServer/0/query?where=&objectIds=65059&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=year_built_027&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnCentroid=false&timeReferenceUnknownClient=false&sqlFormat=none&resultType=&datumTransformation=&lodType=geohash&lod=&lodSR=&f=pjson) (See below). It is a URL that is hitting a json return of the API for retrieving information from the NBI database for a particular bridge and it's year-built attribute. To turn it into a useful GREL expression for our purposes, we'll adjust the objectId to equal our value, as opposed to this one bridge that has the objectId 65059. The following text is adjusted and you can copy & paste it, but understand that you're pointing to the json at the URL with the objectId inserted:
 ```
 https://geo.dot.gov/server/rest/services/Hosted/National_Bridge_Inventory_DS/FeatureServer/0/query?where=&objectIds=" + value + "&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=year_built_027&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnCentroid=false&timeReferenceUnknownClient=false&sqlFormat=none&resultType=&datumTransformation=&lodType=geohash&lod=&lodSR=&f=pjson
