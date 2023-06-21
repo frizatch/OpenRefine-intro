@@ -95,7 +95,7 @@ These expressions allow us to do creative things. For example, we know (since we
 
 We can quickly flag this information by:
 - converting these columns to numbers: Edit cells -> Common Transformations -> To Number
-- creating a new column based on the "maintenance_21" column using the expression: value-cells["owner_022"].value (we are subtracting the numbers)
+- creating a new column based on the "maintenance_21" column using the expression: `value-cells["owner_022"].value` (we are subtracting the numbers)
 - any non-zero value indicates the maintenance is not done by the owner!
 
 ## Undo / Redo
@@ -119,7 +119,7 @@ Select a few rows from the data set (no more than 10!) by:
 - Facet by Star
 - Choose the rows by selecting "include" next to the "true" rows
  
-In the objectId column use the dropdown menu to choose ‘Edit column->Add column by fetching URLs’
+In the objectId column use the dropdown menu to choose Edit column->Add column by fetching URLs
 Give the column a name e.g. “Bridge-Details”
 In the expression box you need to write some GREL where the output of the expression is a URL which can be used to retrieve data (the format of the data could be HTML, XML, JSON, or some other text format)
 
@@ -127,4 +127,14 @@ Examine this ridiculous [link](https://geo.dot.gov/server/rest/services/Hosted/N
 ```
 "https://geo.dot.gov/server/rest/services/Hosted/National_Bridge_Inventory_DS/FeatureServer/0/query?where=&objectIds=" + value + "&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&distance=&units=esriSRUnit_Foot&relationParam=&outFields=year_built_027&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&havingClause=&gdbVersion=&historicMoment=&returnDistinctValues=false&returnIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&multipatchOption=xyFootprint&resultOffset=&resultRecordCount=&returnTrueCurves=false&returnCentroid=false&timeReferenceUnknownClient=false&sqlFormat=none&resultType=&datumTransformation=&lodType=geohash&lod=&lodSR=&f=pjson"
 ```
+Now we have the JSON data from the API added to our information. We didn't call for all the attributes, but the year_built_027 was returned and now we want to pull out that information and add it to a new column:
 
+- on your new Bridge-Details column, select Edit Columns -> Add column based on this column
+- under the column name, write Year-Built
+- for the GREL expression, copy and paste: `forEach(value.parseJson().features,v,v.attributes).join("|").parseJson().year_built_027`
+
+You will see a preview of what the data will look like. If you see a year there, click OK!
+
+You've now added some important information to you data
+
+REMEMBER: you need to export the data to a new file if you want to work with it. Otherwise, you can close your browswer windows and shut down the OpenRefine window with cntrl C ... the steps of your project will be save for you to come back to at a later time.
