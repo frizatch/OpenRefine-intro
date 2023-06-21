@@ -39,9 +39,9 @@ OpenRefine is a free, open-source Java application.
 https://openrefine.org/download.html
 
 Compatible on Windows, Mac and Linux!
-The mac package comes with java built in.
-The windows packages have an option of with java built in or not.
-NOTE: I had my java at the most recent update via my java control panel, but the windows sans java via the github assests page sent me to the Installation documention even so. Windows package with java worked fine.
+
+The mac package comes with java built in. The windows packages have an option of with java built in or not.
+NOTE: you may need to download the windows-with-java option even if you have updated java on your machine.
 
 ### Running OpenRefine
 
