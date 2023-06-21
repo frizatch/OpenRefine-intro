@@ -85,6 +85,10 @@ Do the following and see how quickly you can subset the bridge data to those tha
 
 ### Clustering
 
+Clustering groups together similar, but inconsistent values in a given column and lets you merge these inconsistent values into a single value you choose. You can access it from the text facet menu (where you can get a preview of the counts, etc.) or from going straight to Edit cells -> Cluster and edit... from the column dropdown menu.
+
+There are different clustering algorithms. Play around with the variations.
+
 ## Transformations with GREL
 
 For data manipulation, Open Refine uses GREL (General Refine Expression Language).
