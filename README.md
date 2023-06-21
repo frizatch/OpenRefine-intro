@@ -18,19 +18,21 @@ By the end of this workshop, you will be able to:
 - Look up external data via URLs and enrich your data
 
 ## Outline
-- [Why do we need clean data?](#why-clean-data)
+- Why do we need clean data?
 - What is OpenRefine
 - Getting Set Up and Running OpenRefine
 - Facets, Filters and Clustering
 - Transformations
 - Adding data using APIs
 
-## <a name="why-clean-data"></a>  Why do we need clean data?
+## Why do we need clean data?
 Why do we need clean data?
+
+Data is messy. Try as we might with good data collection design, there will always be errors, mis-entries, typos, etc. in our spreadsheets. Computers don't like these. They can't look at So. Platte River and South Platte River and understand those mean the same thing without some guidance. The addage about spending most of your time wrangling and cleaning data to get ready for analysis as part of your project is true. But OpenRefine can help with that!
 
 ## OpenRefine
 
-OpenRefine is a free, open-source Java application.
+OpenRefine is a, powerful, free, open-source Java application for working with messy data: cleaning it; transforming it from one format into another; and extending it with web services and external data.
 
 ## Getting Set Up
 
