@@ -1,4 +1,4 @@
-# Cleaning data with OpenRefine!
+# Data Wrangling with OpenRefine!
 <img src="images/OpenRefine_logo_color.png" width="200"/>
 
 OpenRefine is a free, open-source Java application that helps you easily prep data for analysis.
