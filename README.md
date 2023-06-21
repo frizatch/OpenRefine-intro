@@ -7,7 +7,7 @@ OpenRefine is a free, open-source Java application that helps you easily prep da
 ## Workshop Resources
  - Software - access via the [OpenRefine's homepage](https://openrefine.org/)
  - Documentation - [OpenRefine's User Manual](https://openrefine.org/docs)
- - Data - download from this dropbox [OpenRefine workshop data folder](https://www.dropbox.com/___________)
+ - Data - download NBI data from this dropbox [OpenRefine workshop data](https://www.dropbox.com/s/b6h9gonvii74k4r/NBI-NationalBridgesIndex-subset.csv?dl=0)
  - Data Dictionary - [field descriptions](https://nationalbridges.com/nbiDesc.html) for the NBI data
 
 ## Workshop Goals
